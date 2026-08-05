@@ -1,0 +1,39 @@
+.loader-screen {
+    position: fixed;
+    inset: 0;
+    background: #0f172a;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    z-index: 9999;
+}
+
+.loader-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    border: 6px solid rgba(255,255,255,.2);
+    border-top-color: #4f46e5;
+
+    animation: spin .8s linear infinite;
+    margin-bottom: 30px;
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loader-screen h2{
+    margin-bottom:10px;
+}
+
+.loader-screen p{
+    color:#94a3b8;
+}
