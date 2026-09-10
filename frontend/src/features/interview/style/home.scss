@@ -1,19 +1,34 @@
 @use "sass:color";
 
 // ── Variables ────────────────────────────────────────────────────────────────
-$bg-page:        #0d1117;
-$bg-card:        #161b22;
-$bg-panel:       #1c2230;
-$bg-input:       #1e2535;
-$border-color:   #2a3348;
-$text-primary:   #e6edf3;
-$text-muted:     #7d8590;
-$accent:         #ff2d78;
-$accent-alt:     #ff6b9d;
-$badge-required: #ff2d78;
-$badge-best:     #ff2d78;
-$info-bg:        #1b2a4a;
-$info-border:    #2d4a7a;
+// $bg-page:        #0d1117;
+// $bg-card:        #161b22;
+// $bg-panel:       #1c2230;
+// $bg-input:       #1e2535;
+// $border-color:   #2a3348;
+// $text-primary:   #e6edf3;
+// $text-muted:     #7d8590;
+// $accent:         #ff2d78;
+// $accent-alt:     #ff6b9d;
+// $badge-required: #ff2d78;
+// $badge-best:     #ff2d78;
+// $info-bg:        #1b2a4a;
+// $info-border:    #2d4a7a;
+// $font-stack:     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+$bg-page:        #f8fafc;
+$bg-card:        #ffffff;
+$bg-panel:       #f1f5f9;
+$bg-input:       #f8fafc;
+$border-color:   #e2e8f0;
+$text-primary:   #0f172a;
+$text-muted:     #64748b;
+$accent:         #e11d48;
+$accent-alt:     #fb7185;
+$badge-required: #e11d48;
+$badge-best:     #e11d48;
+$info-bg:        #eff6ff;
+$info-border:    #bfdbfe;
 $font-stack:     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
 // ── Page Shell ───────────────────────────────────────────────────────────────
@@ -31,7 +46,56 @@ $font-stack:     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Robot
     padding: 3rem 1.5rem;
     gap: 2rem;
 }
+// ── Top Bar ──────────────────────────────────────────────────────────────────
+.top-bar {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
 
+// ── ResumeIQ Brand ───────────────────────────────────────────────────────────
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: default;
+
+    &-name {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: $text-primary;
+
+        span {
+            color: $accent;
+        }
+    }
+}
+
+// ── Logout Button ────────────────────────────────────────────────────────────
+.logout-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    color: $accent;
+    border: 1px solid $accent;
+    border-radius: 0.5rem;
+    font-family: $font-stack;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: $accent;
+        color: #fff;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
 // ── Page Header ──────────────────────────────────────────────────────────────
 .page-header {
     text-align: center;
